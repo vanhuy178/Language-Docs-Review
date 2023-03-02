@@ -2,7 +2,7 @@
 Reveiw Important Point in programming language
 
 ```
-class Vector // overloaded operator
+class Vector 
     {
         double x;
         double y;
@@ -21,12 +21,73 @@ class Vector // overloaded operator
             Vector v = new Vector(x, y);
             return v;
         }
-        public static Vector operator +(Vector v1, double value)
+        public static Vector operator +(Vector v1, double value) // overloaded operator
         {
             double x = v1.x + value;
             double y = v1.y + value;
             Vector v = new Vector(x, y);
             return v;
+        }
+        
+         // indexer
+
+        public double this[int i]
+        {
+            set
+            {
+                switch (i)
+                {
+                    case 0:  //x
+                        x = value;
+                        break;
+                    case 1: //x
+                        y = value;
+                        break;
+                    default:
+                        throw new Exception("Error Index");
+                }
+            }
+            get
+            {
+                switch (i)
+                {
+                    case 0:  //x
+                        return x;
+                    case 1: //x
+                        return y;
+                    default:
+                        throw new Exception("Error Index");
+                }
+            }
+        }
+        public double this[string s]
+        {
+            set
+            {
+                switch (s)
+                {
+                    case "x":  //x
+                        x = value;
+                        break;
+                    case "y": //x
+                        y = value;
+                        break;
+                    default:
+                        throw new Exception("Error Index");
+                }
+            }
+            get
+            {
+                switch (s)
+                {
+                    case "x":  //x
+                        return x;
+                    case "y": //y
+                        return y;
+                    default:
+                        throw new Exception("Error Index");
+                }
+            }
         }
 }
 
@@ -43,5 +104,8 @@ vt3.Info();
 // if you + vector with a number like this var vt3 = vt1 + 10;
 var vt4 = vt1 + 20;
 vt4.Info();
+var vt4 = vt1 + 20;
+Console.WriteLine($"Tọa độ X: {vt4[0]}, Tọa độ Y: {vt4[1]} by indexer index by number");
+Console.WriteLine($"Tọa độ X: {vt4["x"]}, Tọa độ Y: {vt4["y"]} by indexer index by string");
 
 ```
