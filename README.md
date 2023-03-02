@@ -50,5 +50,17 @@ static void Main(string[] args) {
  ac3 += Info;
  Console.WriteLine("Action 3:");
  ac3.Invoke("Love baby");
- }
+  
+ // Func is the same action but it must have return value
+ //Func<int> f1; // -> delegate int f1();
+ //Func<int, string, int> f2; // -> delegate int (int i ,  string s); // the last params is the return value
+
+ Func<int, int, int> calulator;
+ int a = 10;
+ int b = 10;
+ // calulator = Add;
+ // WriteLine($"Sum: {calulator(a, b)}");
+ calulator = Minus;
+ WriteLine($"Minus: {calulator(a, b)}");
+}
 ```
