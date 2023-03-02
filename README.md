@@ -64,3 +64,17 @@ static void Main(string[] args) {
  WriteLine($"Minus: {calulator(a, b)}");
 }
 ```
+
+4. We can received ```ShowLogg``` as arguments
+```
+static void Add(int a, int b, ShowLogg logg)
+{
+    int result = a + b;
+    logg?.Invoke($"The sum in logg is: {result}");
+}
+
+static void Main(string[] args) { 
+Add(10, 20, Info) // 30 with DarkGreen text
+}
+
+```
