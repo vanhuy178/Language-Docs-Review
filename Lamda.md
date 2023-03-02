@@ -19,6 +19,27 @@ Reveiw Important Point in programming language
          };
 
         calculator(10, 10);
+        
+        
+        Action hi;
+        hi = () => WriteLine("Hi fen");
+        hi?.Invoke(); 
+        
+        /*
+            This is the same with above
+            if(hi != null) {
+                hi.Invoke();
+            };
+        */
+
+        Action<string, string> welcome;
+        welcome = (mgs, name) =>
+        {
+            ForegroundColor = ConsoleColor.Yellow;
+            WriteLine($"{mgs} {name}");
+            ResetColor();
+        };
+        welcome("Welcome to my Home", "Hien");
 
 }
 
