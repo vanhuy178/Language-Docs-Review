@@ -1,6 +1,8 @@
 # Language-Docs-Review
 Reveiw Important Point in programming language
 
+1. Lamda expression can assign to delegate.
+
 ```
     static void Main(string[] args)
     {
