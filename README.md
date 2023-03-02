@@ -74,7 +74,7 @@ static void Add(int a, int b, ShowLogg logg)
 }
 
 static void Main(string[] args) { 
-Add(10, 20, Info) // 30 with DarkGreen text
+Add(10, 20, Info)  // The sum in logg is: 30 with DarkGreen color
 }
 
 ```
