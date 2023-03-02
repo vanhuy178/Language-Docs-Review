@@ -38,3 +38,17 @@ static void Main(string[] args) {
 }
 
 ```
+2. We can use delegate is defined by .NET
+```
+static void Main(string[] args) {
+ // Next we talk about Action and Func: this is two delegate build-in by .net, It has generic.
+ Action ac1;     // --> delegate void ac1(no params);
+ Action<string, int> ac2;    // --> delegate void ac2(string s, int i)
+ Action<string> ac3; // delegate void ac3<string s> --> because it received string, and void so we can use two method Info, Warning. 
+
+ ac3 = Warning;
+ ac3 += Info;
+ Console.WriteLine("Action 3:");
+ ac3.Invoke("Love baby");
+ }
+```
