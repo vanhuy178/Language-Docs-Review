@@ -10,3 +10,7 @@ Reveiw Important Point in programming language
 2. What is the different between attribute and propeerties in HTML:5
 - Attributes are additional information which we can put in the HTML to initialize certain DOM properties.
 - Properties are formed when the browser parses the HTML and generates the DOM. Each of the elements in the DOM have their own set of properties which are all set by the browser.
+- When writing HTML source code, you can define attributes on your HTML elements. Then, once the browser parses your code, a corresponding DOM node will be created. This node is an object, and therefore it has properties.
+- For instance, this HTML element:
+```<input type="text" value="Name:">``` has 2 attributes (type and value).
+- Once the browser parses this code, a HTMLInputElement object will be created, and this object will contain dozens of properties like: accept, accessKey, align, alt, attributes, autofocus, baseURI, checked, childElementCount, childNodes, children, classList, className, clientHeight, etc.
