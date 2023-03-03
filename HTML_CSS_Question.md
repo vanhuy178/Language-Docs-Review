@@ -14,3 +14,6 @@ Reveiw Important Point in programming language
 - For instance, this HTML element:
 ```<input type="text" value="Name:">``` has 2 attributes (type and value).
 - Once the browser parses this code, a HTMLInputElement object will be created, and this object will contain dozens of properties like: accept, accessKey, align, alt, attributes, autofocus, baseURI, checked, childElementCount, childNodes, children, classList, className, clientHeight, etc.
+
+3. What is the difference between HTML and XHTML?
+- HTML is the standard markup language for creating web pages, while XHTML is a stricter and more standardized version of HTML. Both HTML and XHTML include a wide range of features, such as support for multimedia, styling, and scripting.
